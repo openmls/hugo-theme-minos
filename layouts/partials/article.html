@@ -12,6 +12,10 @@
             </a>
             {{ end -}}
             {{ $Site := .Site }}
+            {{ if .Params.author }}
+            <pre style="color: #939393;"> by <a href="{{ .Params.author_link }}"> {{ .Params.author }} </a></pre>
+            {{ end }}
+            {{ $Site := .Site }}
             {{ if .Params.categories }}
             <div class="post-categories">
                 <div class="article-category">
